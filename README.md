@@ -15,6 +15,7 @@ cLean Feb 7
     + 29.2581 CORE = 29.2581 CORE
     + 2.96455998 cBTC = 2.96455998 cBTC
     0 coreDAI
+    0 DAI
     0 wCore
     0 WBTC
  
@@ -23,6 +24,7 @@ cLean Feb 7
     - 12 CORE = 17.2581 CORE
     + 0.61097737 cBTC = 3.57553735 cBTC
     0 coreDAI
+    0 DAI
     0 wCore
     0 WBTC
 
@@ -31,6 +33,7 @@ cLean Feb 7
     17.2581 CORE
     3.57553735 cBTC
     + 71228 coreDAI = 71228 coreDAI
+    0 DAI
     + 11.2365 wCORE = 11.2365 wCORE
     0 WBTC
     
@@ -40,6 +43,7 @@ cLean Feb 7
     17.2581 CORE
     3.57553735 cBTC
     + 29233 coreDAI = 100461 coreDAI
+    0 DAI
     - 9 wCORE = 2.2365 wCORE
     0 WBTC
     
@@ -49,6 +53,7 @@ cLean Feb 7
     17.2581 CORE
     3.57553735 cBTC
     + 3327 coreDAI = 103788 coreDAI
+    0 DAI
     - 2.2365 wCORE = 0 wCORE
     0 WBTC
 
@@ -57,13 +62,42 @@ cLean Feb 7
     17.2581 CORE
     -3.57553735 cBTC = 0 cBTC
     103788 coreDAI
+    0 DAI
     0 wCORE
     +3.57553735 WBTC = 3.57553735 WBTC
+
+ - [Unwrap 103,788 coreDAI](https://etherscan.io/tx/0xda51ceb737314055cdd744a63ddad9ca286cb67e4a062a43cf7e6a475b370ae9)
+
+    17.2581 CORE
+    0 cBTC
+    -103788 coreDAI
+    +103788 DAI = 103788 DAI
+    0 wCORE
+    3.57553735 WBTC
+
+ - [Swap 3.57553735 WBTC for 157,655 DAI](https://etherscan.io/tx/0x2361c0e8efb797a245b63dd496d103f89745a475fa65820afe1113bd81e5d316)
+
+    17.2581 CORE
+    0 cBTC
+    0 coreDAI
+    +157655 DAI = 261443 DAI
+    0 wCORE
+    -3.57553735 WBTC = 0 WBTC
 
 ### Net change
 
     +17.2581 CORE
-    +103,788 coreDAI
-    +3.57553735 WBTC
+    +261,443 DAI
+    0 WBTC
+    0 coreDAI
     0 cBTC
     0 wCORE
+
+
+----
+
+CoreDAO Acquistions
+
+ - [Transfer 261,443 DAI to hot trading wallet 0x96A9...](https://etherscan.io/tx/0x9f4990f03f4d6ddb844286ecee9367b83fe88a867e8b482e6119aa8ed7c9f1e8)
+ - [Purchase 22,929 coreDAO for  25,000 DAI](https://etherscan.io/tx/0xaf1ab01663d5efb5a42658fa4f404d6b7fb8e2eaa70219c29e174730a11ed796)
+ - wait...
