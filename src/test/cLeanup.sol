@@ -2,7 +2,7 @@
 pragma solidity 0.8.10;
 
 import "ds-test/test.sol";
-import "./Vm/CheatCodes.sol";
+import "./testlibs/CheatCodes.sol";
 import "./console.sol";
 import "../IUniswapV2Pair.sol";
 
