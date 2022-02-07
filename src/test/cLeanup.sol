@@ -16,6 +16,7 @@ contract ContractTest is DSTest {
 
     function testBurnLP() public {
         uint256 startBal = coreCbtcPair.balanceOf(beefa);
+        vm.startPrank(beefa);
         coreCbtcPair.burn(beefa);
         uint256 endBal = coreCbtcPair.balanceOf(beefa);
         assert(startBal > endBal);
