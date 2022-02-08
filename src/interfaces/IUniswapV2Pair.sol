@@ -1,10 +1,4 @@
-/**
- *Submitted for verification at Etherscan.io on 2020-05-05
-*/
 
-// File: contracts/interfaces/IUniswapV2Pair.sol
-
-pragma solidity >=0.5.0;
 
 interface IUniswapV2Pair {
     event Approval(address indexed owner, address indexed spender, uint value);

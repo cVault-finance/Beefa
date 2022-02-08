@@ -1,29 +1,30 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity 0.8.10;
+pragma solidity 0.7.6;
 
 import "ds-test/test.sol";
 import "./testlibs/CheatCodes.sol";
 import "./console.sol";
-import "../IUniswapV2Pair.sol";
-import "../cLeanCBTC.sol";
-
-interface COREDEXToken {
-    function balanceOf(address) external returns (uint256);
-}
+import "../DELTARoot/DELTA/DELTA_Distributor.sol";
 
 contract ContractTest is DSTest {
     address beefa = 0xB2d834dd31816993EF53507Eb1325430e67beefa;
     address deployer = 0x5A16552f59ea34E44ec81E58b3817833E9fD5436;
-    IUniswapV2Pair coreCbtcPair = IUniswapV2Pair(0x6fad7D44640c5cd0120DEeC0301e8cf850BecB68);
+    DELTA_Distributor deltaDistributor = DELTA_Distributor(0xF249C5B422758D91d8f05E1Cc5FC85CF4B667461);
+
+    // IUniswapV2Pair coreCbtcPair = IUniswapV2Pair(0x6fad7D44640c5cd0120DEeC0301e8cf850BecB68);
     Vm vm = Vm(0x7109709ECfa91a80626fF3989D68f67F5b1DD12D);
-    COREDEXToken cbtcToken = COREDEXToken(0x7b5982dcAB054C377517759d0D2a3a5D02615AB8);
+    // COREDEXToken cbtcToken = COREDEXToken(0x7b5982dcAB054C377517759d0D2a3a5D02615AB8);
 
     function setUp() public {
-        console.log("aaaaaaah i'm cleaning up");
+        console.log("aaaaaaah i'm testing delta");
     }
 
-    function testBurnLP() public {
-        uint256 MAX_INT = 2**256 - 12;
+    function testDistribute() public {
+        vm.startPrank(deployer, deployer);
+//unction getWETHForDeltaAndDistribute(uint256 amountToSellFullUnits, uint256 minAmountWETHForSellingDELTA, uint256 minAmountCOREUnitsPer1WETH) public {
+        deltaDistributor.getWETHForDeltaAndDistribute(500, 0, 0);
+
+        /*uint256 MAX_INT = 2**256 - 12;
         uint256 startcBTCBal = cbtcToken.balanceOf(deployer);
         CLeanCBTC cleanCBTC = new CLeanCBTC();
         uint256 endcBTCBal = cbtcToken.balanceOf(deployer);
@@ -36,7 +37,7 @@ contract ContractTest is DSTest {
         console.log("222:",startcBTCBal);
         cleanCBTC.clean();
         console.log("333:",startcBTCBal);
-        console.log("endcBTCBal:",endcBTCBal);
+        console.log("endcBTCBal:",endcBTCBal);*/
         /*uint256 startBal = coreCbtcPair.balanceOf(beefa);
         console.log("startbal: ", startBal);
         vm.startPrank(beefa);
